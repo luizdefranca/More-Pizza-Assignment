@@ -15,7 +15,7 @@
     
    Pizza *pizza = [[Pizza alloc] initWithSize:size andToppings:toppings];
         if ([self.delegate kitchen:self shouldMakePizzaOfSize:size andToppings:toppings]) {
-            NSLog(@"ShouldMakePizza returned YES");
+            //NSLog(@"ShouldMakePizza returned YES");
           
             if([self.delegate kitchenShouldUpgradeOrder:self]){ //change the pizza to large size if YES
                 pizza.size = large;
@@ -33,15 +33,17 @@
     return pizza;
 }
 +(Pizza *)largePepperoni{
-    
-    Pizza *pizza = [[Pizza alloc]initWithSize: large andToppings: @[@"cheese", @"pepperoni"]];
+   Pizza *pizza = [[Kitchen new] makePizzaWithSize:large toppings:@[@"cheese", @"pepperoni"]];
+
+   // Pizza *pizza = [[Pizza alloc]initWithSize: large andToppings: @[@"cheese", @"pepperoni"]];
     
     return pizza;
 }
 
 +(Pizza *)meatLoversWithSize:(PizzaSize)size{
-    
-    Pizza *pizza = [[Pizza alloc] initWithSize: size andToppings: @[@"cheese", @"meat"]];
+
+    Pizza *pizza = [[Kitchen new] makePizzaWithSize: size toppings:@[@"cheese", @"meat"]];
+    //Pizza *pizza = [[Pizza alloc] initWithSize: size andToppings: @[@"cheese", @"meat"]];
     return pizza;
 }
 @end

@@ -8,6 +8,8 @@
 
 #import "SecondManager.h"
 
+
+
 @implementation SecondManager
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings{
     
@@ -20,5 +22,6 @@
 
 -(void)kitchenDidMakePizza:(Pizza *)pizza{
     NSLog(@"Yippee Ki-Yay");
+    [super.delivery deliverPizza: pizza];
 }
 @end

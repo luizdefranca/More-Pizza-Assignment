@@ -1,5 +1,5 @@
 //
-//  SecondManager.h
+//  DeliveryService.h
 //  PizzaRestaurant
 //
 //  Created by Luiz on 5/3/19.
@@ -7,13 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Kitchen.h"
 #import "MainManager.h"
+#import "DeliveryCar.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SecondManager : MainManager
+@interface DeliveryService : NSObject
+
+//Methods
+- (NSArray*) descriptionOfDeliveredPizzas;
+-(void) deliverPizza:(Pizza *)pizza;
+
+//Properties
 
 @end
 

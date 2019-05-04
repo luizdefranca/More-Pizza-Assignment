@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250EA04B227D487000EDC73B /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 250EA04A227D487000EDC73B /* Car.m */; };
 		25456B8E227B7375006B0D52 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456B8D227B7375006B0D52 /* Pizza.m */; };
 		25456BA7227BA264006B0D52 /* InputOutputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BA6227BA264006B0D52 /* InputOutputController.m */; };
-		25456BDD227CCA13006B0D52 /* ManagerThatHateAnchovies.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BDC227CCA13006B0D52 /* ManagerThatHateAnchovies.m */; };
+		25456BDD227CCA13006B0D52 /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BDC227CCA13006B0D52 /* MainManager.m */; };
 		25456BE0227CCD71006B0D52 /* SecondManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BDF227CCD71006B0D52 /* SecondManager.m */; };
+		25456BE6227CEAAB006B0D52 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BE5227CEAAB006B0D52 /* DeliveryService.m */; };
+		25456BE9227CEAB6006B0D52 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 25456BE8227CEAB6006B0D52 /* DeliveryCar.m */; };
 		6001EC81197B4EC300F97011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6001EC80197B4EC300F97011 /* Foundation.framework */; };
 		6001EC84197B4EC300F97011 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC83197B4EC300F97011 /* main.m */; };
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
@@ -29,14 +32,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		250EA049227D487000EDC73B /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		250EA04A227D487000EDC73B /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		25456B8C227B7375006B0D52 /* Pizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 		25456B8D227B7375006B0D52 /* Pizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
 		25456BA5227BA264006B0D52 /* InputOutputController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputOutputController.h; sourceTree = "<group>"; };
 		25456BA6227BA264006B0D52 /* InputOutputController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputOutputController.m; sourceTree = "<group>"; };
-		25456BDB227CCA13006B0D52 /* ManagerThatHateAnchovies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerThatHateAnchovies.h; sourceTree = "<group>"; };
-		25456BDC227CCA13006B0D52 /* ManagerThatHateAnchovies.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerThatHateAnchovies.m; sourceTree = "<group>"; };
+		25456BDB227CCA13006B0D52 /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
+		25456BDC227CCA13006B0D52 /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		25456BDE227CCD71006B0D52 /* SecondManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondManager.h; sourceTree = "<group>"; };
 		25456BDF227CCD71006B0D52 /* SecondManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondManager.m; sourceTree = "<group>"; };
+		25456BE4227CEAAB006B0D52 /* DeliveryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		25456BE5227CEAAB006B0D52 /* DeliveryService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
+		25456BE7227CEAB6006B0D52 /* DeliveryCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		25456BE8227CEAB6006B0D52 /* DeliveryCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
 		6001EC7D197B4EC300F97011 /* PizzaRestaurant */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaRestaurant; sourceTree = BUILT_PRODUCTS_DIR; };
 		6001EC80197B4EC300F97011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6001EC83197B4EC300F97011 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,8 +97,14 @@
 				6001EC83197B4EC300F97011 /* main.m */,
 				6001EC8E197B502F00F97011 /* Kitchen.h */,
 				6001EC8F197B502F00F97011 /* Kitchen.m */,
-				25456BDB227CCA13006B0D52 /* ManagerThatHateAnchovies.h */,
-				25456BDC227CCA13006B0D52 /* ManagerThatHateAnchovies.m */,
+				25456BE4227CEAAB006B0D52 /* DeliveryService.h */,
+				25456BE5227CEAAB006B0D52 /* DeliveryService.m */,
+				25456BE7227CEAB6006B0D52 /* DeliveryCar.h */,
+				250EA049227D487000EDC73B /* Car.h */,
+				250EA04A227D487000EDC73B /* Car.m */,
+				25456BE8227CEAB6006B0D52 /* DeliveryCar.m */,
+				25456BDB227CCA13006B0D52 /* MainManager.h */,
+				25456BDC227CCA13006B0D52 /* MainManager.m */,
 				25456BDE227CCD71006B0D52 /* SecondManager.h */,
 				25456BDF227CCD71006B0D52 /* SecondManager.m */,
 				25456B8C227B7375006B0D52 /* Pizza.h */,
@@ -135,7 +150,7 @@
 		6001EC75197B4EC300F97011 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Lighthouse Labs";
 			};
 			buildConfigurationList = 6001EC78197B4EC300F97011 /* Build configuration list for PBXProject "PizzaRestaurant" */;
@@ -160,9 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25456BDD227CCA13006B0D52 /* ManagerThatHateAnchovies.m in Sources */,
+				250EA04B227D487000EDC73B /* Car.m in Sources */,
+				25456BDD227CCA13006B0D52 /* MainManager.m in Sources */,
 				25456BE0227CCD71006B0D52 /* SecondManager.m in Sources */,
+				25456BE9227CEAB6006B0D52 /* DeliveryCar.m in Sources */,
 				25456B8E227B7375006B0D52 /* Pizza.m in Sources */,
+				25456BE6227CEAAB006B0D52 /* DeliveryService.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,
 				25456BA7227BA264006B0D52 /* InputOutputController.m in Sources */,
@@ -180,18 +198,32 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -218,19 +250,32 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

@@ -6,24 +6,35 @@
 //  Copyright © 2019 Lighthouse Labs. All rights reserved.
 //
 
-#import "ManagerThatHateAnchovies.h"
+#import "MainManager.h"
 
-@implementation ManagerThatHateAnchovies
+@implementation MainManager
 
--(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings{
+- (instancetype)initWithDeliveryService:(DeliveryService *) deliveryService
+{
+    self = [super init];
+    if (self) {
+        _delivery = deliveryService;
+    }
+    return self;
+}
+
+-(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings {
     BOOL containAnchovies = [self thereIsAnchovie: toppings];
     if(containAnchovies){
         return NO;
     }
     return YES;
 }
--(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen{
+
+-(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen {
     return  NO;
 }
 
 
 -(void)kitchenDidMakePizza:(Pizza *)pizza{
     
+    [_delivery deliverPizza: pizza];
 }
 
 //Private Methods
