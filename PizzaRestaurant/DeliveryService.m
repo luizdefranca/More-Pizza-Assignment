@@ -10,31 +10,42 @@
 
 @interface DeliveryService()
 //Private Properties
-@property (strong, nonatomic) NSMutableArray * deliveryRecords;
+//@property  (strong, nonatomic )  NSMutableArray * deliveryRecords;
 @end
 
 @implementation DeliveryService
 
+//singleton
++ (instancetype)sharedInstance {
+    static DeliveryService *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[DeliveryService alloc] init];
+    });
+    return sharedInstance;
+}
+
 
 -(void) deliverPizza:(Pizza *)pizza {
 
-    if(!_deliveryRecords){
-        _deliveryRecords = [NSMutableArray new];
+    if(! deliveryRecords){
+        deliveryRecords = [NSMutableArray new];
     }
     NSString *trimmidedPizzaDescription = [pizza.description stringByTrimmingCharactersInSet: NSCharacterSet .newlineCharacterSet];
 
-    [_deliveryRecords addObject: trimmidedPizzaDescription];
+    [deliveryRecords addObject: trimmidedPizzaDescription];
     DeliveryCar * deliveryCar = [DeliveryCar new];
     [deliveryCar deliverPizza: pizza];
 
 
 }
 
-- (NSArray*) descriptionOfDeliveredPizzas {
+- (NSString*) descriptionOfDeliveredPizzas {
     NSMutableString *records = [NSMutableString new];
     [records appendString:@"Delivery service records: \n"];
 
-    for (NSString *record in _deliveryRecords) {
+    for (NSString *record in deliveryRecords) {
         [records appendFormat:@"%@ \n", [record stringByTrimmingCharactersInSet:NSCharacterSet .newlineCharacterSet]];
     }
 

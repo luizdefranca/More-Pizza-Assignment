@@ -10,6 +10,18 @@
 
 @implementation Kitchen
 
+//Singleton
+
++ (instancetype)sharedInstance {
+    static Kitchen *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[Kitchen alloc] init];
+    });
+    return sharedInstance;
+}
+
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings {
     
@@ -33,7 +45,7 @@
     return pizza;
 }
 +(Pizza *)largePepperoni{
-   Pizza *pizza = [[Kitchen new] makePizzaWithSize:large toppings:@[@"cheese", @"pepperoni"]];
+   Pizza *pizza = [[Kitchen sharedInstance] makePizzaWithSize:large toppings:@[@"cheese", @"pepperoni"]];
 
    // Pizza *pizza = [[Pizza alloc]initWithSize: large andToppings: @[@"cheese", @"pepperoni"]];
     
@@ -42,7 +54,7 @@
 
 +(Pizza *)meatLoversWithSize:(PizzaSize)size{
 
-    Pizza *pizza = [[Kitchen new] makePizzaWithSize: size toppings:@[@"cheese", @"meat"]];
+    Pizza *pizza = [[Kitchen sharedInstance] makePizzaWithSize: size toppings:@[@"cheese", @"meat"]];
     //Pizza *pizza = [[Pizza alloc] initWithSize: size andToppings: @[@"cheese", @"meat"]];
     return pizza;
 }

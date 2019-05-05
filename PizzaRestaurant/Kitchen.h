@@ -29,6 +29,9 @@
 //Methods
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
 
+//Static methods - singleton
++ (instancetype)sharedInstance;
+
 //Convenients Methods
 +(Pizza *)largePepperoni;
 +(Pizza *)meatLoversWithSize:(PizzaSize)size;

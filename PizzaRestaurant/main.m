@@ -24,7 +24,7 @@
             NSLog(@"Please pick your pizza size and toppings:");
             NSString *choseManagerMessage = @"Please, chose your manager:\n \"first\" or \"second\" or anything to no manager";
 
-            Kitchen *restaurantKitchen = [Kitchen new];
+            Kitchen *restaurantKitchen = [Kitchen sharedInstance];
             MainManager* noAnch;
             SecondManager* second;
             DeliveryService * deliveryService;
@@ -39,8 +39,8 @@
                     if (!noAnch) {
                         noAnch = [MainManager new];
                         if(!deliveryService){
-                            deliveryService = [DeliveryService new];
-                            noAnch.delivery = deliveryService;
+                            deliveryService = [DeliveryService sharedInstance];
+//                            noAnch.delivery = deliveryService;
                         }
                     }
                     restaurantKitchen.delegate = noAnch;
@@ -48,13 +48,17 @@
                     if (!second) {
                         second = [SecondManager new];
                         if(!deliveryService){
-                            deliveryService = [DeliveryService new];
-                            second.delivery = deliveryService;
+                            deliveryService = [DeliveryService sharedInstance];
+//                            second.delivery = deliveryService;
                         }
                     }
                     restaurantKitchen.delegate = second;
+
+
+
                 }
 
+                NSLog(@"Chose your pizza");
                 NSLog(@"> ");
                 char str[100];
                 fgets (str, 100, stdin);
@@ -71,25 +75,24 @@
                 // And then send some message to the kitchen...
                 if(commandWords.count > 0){
 
-                    if([commandWords[0] isEqualToString:@"pepperoni" ]){
+                    if([commandWords[0] isEqualToString:@"pepperoni" ]) {
                         pizza = [Kitchen largePepperoni];
 
                     } else if([commandWords[0] isEqualToString:@"large"]
                               || [commandWords[0] isEqualToString:@"medium"]
-                              || [commandWords[0] isEqualToString:@"small"]){
+                              || [commandWords[0] isEqualToString:@"small"]) {
 
-
-
-                        if([commandWords[1] isEqualToString: @"meatlovers"]){
+                        if([commandWords[1] isEqualToString: @"meatlovers"]) {
 
                                 PizzaSize size = [InputOutputController convertStringToPizzaSize: commandWords[0]];
-                                pizza = [Kitchen meatLoversWithSize: size];} else {
+                                pizza = [Kitchen meatLoversWithSize: size];
+
+                        } else {
                                 NSString * sizeString = [[NSString alloc]initWithString:commandWords[0]];
                                 PizzaSize size = [InputOutputController convertStringToPizzaSize:sizeString];
                                 NSArray<NSString*>* toppings = [commandWords subarrayWithRange: NSMakeRange(1, commandWords.count  - 1)];
                                 pizza = [restaurantKitchen makePizzaWithSize: size toppings:toppings];
-
-                            }
+                        }
                     }
                 }
 

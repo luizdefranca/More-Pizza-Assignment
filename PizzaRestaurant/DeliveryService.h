@@ -13,7 +13,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DeliveryService : NSObject
+@interface DeliveryService : NSObject {
+@protected NSMutableArray * deliveryRecords;
+}
+
+//Static Methods
+//Singleton
++ (instancetype)sharedInstance;
 
 //Methods
 - (NSArray*) descriptionOfDeliveredPizzas;

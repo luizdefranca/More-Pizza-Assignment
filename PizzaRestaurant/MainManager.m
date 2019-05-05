@@ -10,14 +10,16 @@
 
 @implementation MainManager
 
-- (instancetype)initWithDeliveryService:(DeliveryService *) deliveryService
-{
+
+- (instancetype)init {
     self = [super init];
-    if (self) {
-        _delivery = deliveryService;
+    if (self){
+        _delivery = [DeliveryService sharedInstance];
     }
-    return self;
+    return  self;
 }
+
+
 
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings {
     BOOL containAnchovies = [self thereIsAnchovie: toppings];

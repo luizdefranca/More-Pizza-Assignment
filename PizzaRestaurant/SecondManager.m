@@ -22,6 +22,6 @@
 
 -(void)kitchenDidMakePizza:(Pizza *)pizza{
     NSLog(@"Yippee Ki-Yay");
-    [super.delivery deliverPizza: pizza];
+    [self.delivery deliverPizza: pizza];
 }
 @end

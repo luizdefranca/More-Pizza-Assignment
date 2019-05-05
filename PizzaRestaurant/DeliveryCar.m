@@ -10,7 +10,16 @@
 
 @implementation DeliveryCar
 
+//singleton
++ (instancetype)sharedInstance {
+    static DeliveryCar *sharedInstance = nil;
+    static dispatch_once_t onceToken;
 
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[DeliveryCar alloc] init];
+    });
+    return sharedInstance;
+}
 
 -(void) deliverPizza:(Pizza *)pizza {
     
